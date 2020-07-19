@@ -16,8 +16,8 @@ public class LoginController {
 
     //@RequestMapping(value = "/user/login",method = RequestMethod.POST)
     //以前的写法需要在requestmapping中指定请求方式post
-
-    @PostMapping(value = "/user/login")//restful风格写法中，可直接用postmapping接收请求
+    //restful风格写法中，可直接用postmapping接收请求
+    @PostMapping(value = "/user/login")
     public String login(@RequestParam("username") String username,
                         @RequestParam("password") String password,
                         Map<String,Object> map, HttpSession session){//用requestpara标注的属性一旦没提交，就会报错
